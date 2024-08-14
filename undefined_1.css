@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000; /* Black background */
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    color: #f0f0f0; /* Light text color for readability */
+    margin: 0;
+    overflow: hidden; /* Prevents scroll bars */
+}
+
+.container {
+    text-align: center;
+    background-color: #1e1e1e; /* Dark gray background for contrast */
+    padding: 40px 30px;
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6); /* Strong shadow for depth */
+    max-width: 90%;
+    width: 400px; /* Constrain width for better appearance on larger screens */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #ff5722; /* Accent color for the heading */
+    text-transform: uppercase; /* All caps for emphasis */
+}
+
+.emoji {
+    font-size: 6rem; /* Larger emoji size */
+    margin: 20px 0;
+    animation: bounce 1s infinite; /* Bouncing animation */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #cccccc; /* Slightly lighter text color for the paragraph */
+}
+
+/* Media query for 1280x720 resolution */
+@media only screen and (min-width: 1280px) and (min-height: 720px) {
+    .container {
+        width: 600px; /* Larger width for 1280x720 screens */
+        padding: 60px 50px; /* More padding for better spacing */
+    }
+
+    h1 {
+        font-size: 3.2rem; /* Larger font size for heading */
+    }
+
+    .emoji {
+        font-size: 7rem; /* Larger emoji size */
+    }
+
+    p {
+        font-size: 1.5rem; /* Larger font size for paragraph */
+    }
+}
